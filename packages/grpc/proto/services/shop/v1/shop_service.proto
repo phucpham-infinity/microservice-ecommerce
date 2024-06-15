@@ -1,0 +1,65 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+package proto.services.shop.v1;
+
+// The user service definition.
+service ShopService {
+  // Shop registration
+  rpc SignUpShop (SignUpShopRequest) returns (SignUpShopResponse) {}
+ 
+}
+
+// Status enum
+enum ShopStatus {
+  // INACTIVE status
+  STATUS_INACTIVE_UNSPECIFIED = 0;
+  // ACTIVE status
+  STATUS_ACTIVE = 1;
+}
+
+// Shop data message
+message ShopData {
+  // The unique identifier of the shop.
+  string id = 1; 
+  // The name of the shop.
+  string name = 2;
+  // The email of the shop.
+  string email = 3; 
+  // The status of the shop.
+  ShopStatus status = 4;
+  // The verify of the shop.
+  bool verify = 5;
+  // The role of the shop.
+  repeated string role = 6;
+  // The created at of the shop.
+  string created_at = 7;
+  // The updated at of the shop.
+  string updated_at = 8;
+}
+
+
+// Shop registration request
+message SignUpShopRequest {
+  // The name of the shop.
+  string name = 1;
+  // The email of the shop.
+  string email = 2;
+  // The password of the shop.
+  string password = 3;
+  // The status of the shop.
+  ShopStatus status = 4;
+  // The verify of the shop.
+  bool verify = 5;
+  // The role of the shop.
+  repeated string role = 6;
+}
+
+// Shop registration response
+message SignUpShopResponse {
+  // The message of the shop.
+  string message = 1;
+  // The data of the shop.
+  ShopData data = 2;
+}
