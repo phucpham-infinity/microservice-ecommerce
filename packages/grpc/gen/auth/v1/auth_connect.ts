@@ -3,8 +3,8 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { GetMeRequest, GetMeResponse, LoginRequest, LoginResponse, SignupRequest, SignupResponse } from "./auth_pb.js";
-import { MethodKind } from "@bufbuild/protobuf";
+import { GetMeRequest, GetMeResponse, LoginRequest, LoginResponse, SignupRequest, SignupResponse } from './auth_pb';
+import { MethodKind } from '@bufbuild/protobuf';
 
 /**
  * The AuthService defines the authentication service.
@@ -12,7 +12,7 @@ import { MethodKind } from "@bufbuild/protobuf";
  * @generated from service proto.services.auth.v1.AuthService
  */
 export const AuthService = {
-  typeName: "proto.services.auth.v1.AuthService",
+  typeName: 'proto.services.auth.v1.AuthService',
   methods: {
     /**
      * Login creates a new session for a user.
@@ -20,10 +20,10 @@ export const AuthService = {
      * @generated from rpc proto.services.auth.v1.AuthService.Login
      */
     login: {
-      name: "Login",
+      name: 'Login',
       I: LoginRequest,
       O: LoginResponse,
-      kind: MethodKind.Unary,
+      kind: MethodKind.Unary
     },
     /**
      * Signup creates a new user and a session for them.
@@ -31,10 +31,10 @@ export const AuthService = {
      * @generated from rpc proto.services.auth.v1.AuthService.Signup
      */
     signup: {
-      name: "Signup",
+      name: 'Signup',
       I: SignupRequest,
       O: SignupResponse,
-      kind: MethodKind.Unary,
+      kind: MethodKind.Unary
     },
     /**
      * GetMe retrieves the information of the current user.
@@ -42,11 +42,10 @@ export const AuthService = {
      * @generated from rpc proto.services.auth.v1.AuthService.GetMe
      */
     getMe: {
-      name: "GetMe",
+      name: 'GetMe',
       I: GetMeRequest,
       O: GetMeResponse,
-      kind: MethodKind.Unary,
-    },
+      kind: MethodKind.Unary
+    }
   }
 } as const;
-

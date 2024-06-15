@@ -3,8 +3,8 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { SignUpShopRequest, SignUpShopResponse } from "./shop_service_pb.js";
-import { MethodKind } from "@bufbuild/protobuf";
+import { SignUpShopRequest, SignUpShopResponse } from './shop_service_pb';
+import { MethodKind } from '@bufbuild/protobuf';
 
 /**
  * The user service definition.
@@ -12,7 +12,7 @@ import { MethodKind } from "@bufbuild/protobuf";
  * @generated from service proto.services.shop.v1.ShopService
  */
 export const ShopService = {
-  typeName: "proto.services.shop.v1.ShopService",
+  typeName: 'proto.services.shop.v1.ShopService',
   methods: {
     /**
      * Shop registration
@@ -20,11 +20,10 @@ export const ShopService = {
      * @generated from rpc proto.services.shop.v1.ShopService.SignUpShop
      */
     signUpShop: {
-      name: "SignUpShop",
+      name: 'SignUpShop',
       I: SignUpShopRequest,
       O: SignUpShopResponse,
-      kind: MethodKind.Unary,
-    },
+      kind: MethodKind.Unary
+    }
   }
 } as const;
-
